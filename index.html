@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaultrap Security — Catch Attackers Before They Strike</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0e17;color:#e0e0e0;}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 60px;border-bottom:1px solid #1a2332;position:fixed;width:100%;top:0;background:#0a0e17;z-index:100;}
+.logo{font-size:22px;font-weight:700;color:#00c896;letter-spacing:2px;}
+.logo span{color:#fff;}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{color:#888;text-decoration:none;font-size:14px;transition:color 0.2s;}
+.nav-links a:hover{color:#00c896;}
+.nav-cta{padding:8px 20px;background:#00c896;color:#000;border-radius:4px;font-size:14px;font-weight:600;text-decoration:none;}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;background:radial-gradient(ellipse at center top,#0d2a1a 0%,#0a0e17 60%);}
+.hero-badge{display:inline-block;padding:6px 16px;background:#0d2a1a;color:#00c896;border:1px solid #00c896;border-radius:20px;font-size:12px;margin-bottom:24px;letter-spacing:1px;}
+.hero h1{font-size:52px;font-weight:700;line-height:1.15;margin-bottom:20px;max-width:800px;}
+.hero h1 span{color:#00c896;}
+.hero p{font-size:18px;color:#888;max-width:560px;margin:0 auto 40px;line-height:1.7;}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{padding:14px 32px;background:#00c896;color:#000;border-radius:4px;font-size:15px;font-weight:700;text-decoration:none;}
+.btn-outline{padding:14px 32px;border:1px solid #333;color:#e0e0e0;border-radius:4px;font-size:15px;text-decoration:none;}
+.btn-outline:hover{border-color:#00c896;color:#00c896;}
+
+.stats{display:flex;justify-content:center;gap:60px;padding:60px 20px;border-top:1px solid #1a2332;border-bottom:1px solid #1a2332;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-num{font-size:36px;font-weight:700;color:#00c896;}
+.stat-label{font-size:13px;color:#666;margin-top:4px;}
+
+.section{padding:80px 60px;max-width:1100px;margin:0 auto;}
+.section-badge{font-size:11px;color:#00c896;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;}
+.section h2{font-size:36px;font-weight:700;margin-bottom:16px;}
+.section p{font-size:16px;color:#888;line-height:1.7;max-width:600px;}
+
+.problem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px;}
+.problem-card{background:#0d1117;border:1px solid #1a2332;border-radius:8px;padding:24px;}
+.problem-card h3{font-size:16px;font-weight:600;margin-bottom:8px;color:#fff;}
+.problem-card p{font-size:14px;color:#666;line-height:1.6;}
+.problem-icon{font-size:24px;margin-bottom:12px;}
+
+.how-it-works{background:#0d1117;padding:80px 60px;}
+.how-inner{max-width:1100px;margin:0 auto;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+.step{text-align:center;padding:24px;}
+.step-num{width:48px;height:48px;background:#00c896;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;margin:0 auto 16px;}
+.step h3{font-size:15px;font-weight:600;margin-bottom:8px;}
+.step p{font-size:13px;color:#666;line-height:1.6;}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.feature-card{background:#0d1117;border:1px solid #1a2332;border-radius:8px;padding:28px;}
+.feature-card h3{font-size:16px;font-weight:600;margin-bottom:10px;color:#fff;}
+.feature-card p{font-size:14px;color:#666;line-height:1.6;}
+.feature-tag{display:inline-block;padding:3px 10px;background:#0d2a1a;color:#00c896;border-radius:3px;font-size:11px;margin-bottom:12px;}
+
+.ai-section{background:#0d1117;padding:80px 60px;text-align:center;}
+.ai-inner{max-width:800px;margin:0 auto;}
+.accuracy{font-size:80px;font-weight:700;color:#00c896;line-height:1;}
+.accuracy-label{font-size:18px;color:#888;margin-top:8px;}
+.dataset-grid{display:flex;justify-content:center;gap:40px;margin-top:48px;flex-wrap:wrap;}
+.dataset{text-align:center;}
+.dataset-num{font-size:24px;font-weight:700;color:#fff;}
+.dataset-label{font-size:12px;color:#666;margin-top:4px;}
+
+.cta-section{padding:80px 60px;text-align:center;}
+.cta-section h2{font-size:36px;font-weight:700;margin-bottom:16px;}
+.cta-section p{font-size:16px;color:#888;margin-bottom:40px;}
+.cta-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto;}
+.cta-form input{flex:1;padding:12px 16px;background:#0d1117;border:1px solid #1a2332;border-radius:4px;color:#e0e0e0;font-size:14px;min-width:200px;}
+.cta-form input:focus{outline:none;border-color:#00c896;}
+.cta-form button{padding:12px 24px;background:#00c896;color:#000;border:none;border-radius:4px;font-size:14px;font-weight:700;cursor:pointer;}
+
+footer{border-top:1px solid #1a2332;padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-logo{font-size:18px;font-weight:700;color:#00c896;}
+.footer-logo span{color:#fff;}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{color:#666;text-decoration:none;font-size:13px;}
+.footer-copy{color:#444;font-size:12px;}
+
+.live-badge{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:20px;}
+.live-dot{width:8px;height:8px;background:#00c896;border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.live-text{font-size:12px;color:#00c896;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">VAULT<span>TRAP</span></div>
+  <ul class="nav-links">
+    <li><a href="#problem">Problem</a></li>
+    <li><a href="#solution">Solution</a></li>
+    <li><a href="#product">Product</a></li>
+    <li><a href="#ai">AI Model</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Request Demo</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="live-badge"><div class="live-dot"></div><span class="live-text">MAVA PLATFORM — LIVE</span></div>
+    <div class="hero-badge">India's First Autonomous Deception Security Platform</div>
+    <h1>Catch Attackers<br><span>Before They Strike</span></h1>
+    <p>Vaultrap deploys an invisible deception layer across your network. Attackers walk into our trap. MAVA detects, profiles, and contains them autonomously — in under 4 seconds.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Request Free Pilot</a>
+      <a href="#product" class="btn-outline">See How It Works</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat-item"><div class="stat-num">25L+</div><div class="stat-label">Cyber attacks in India 2025</div></div>
+  <div class="stat-item"><div class="stat-num">₹9,812Cr</div><div class="stat-label">Financial losses from attacks</div></div>
+  <div class="stat-item"><div class="stat-num">60 days</div><div class="stat-label">Average attacker dwell time</div></div>
+  <div class="stat-item"><div class="stat-num">4 sec</div><div class="stat-label">MAVA response time</div></div>
+</div>
+
+<section class="section" id="problem">
+  <div class="section-badge">The Problem</div>
+  <h2>India's enterprises are<br>flying blind</h2>
+  <p>Traditional security tools alert you after damage is done. Attackers hide for months. Security teams drown in false positives. No tool is built for India's specific threat landscape.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-icon">⏱</div>
+      <h3>60-day blind spot</h3>
+      <p>Average attacker hides undetected for 60 days inside enterprise networks before anyone notices.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🚨</div>
+      <h3>Alert fatigue kills teams</h3>
+      <p>Security teams receive thousands of alerts daily. 90% are false positives. Real threats get missed.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🌍</div>
+      <h3>Foreign tools miss India</h3>
+      <p>No platform is trained on Indian attack patterns — UPI fraud, banking trojans, India-specific threats.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🤖</div>
+      <h3>Humans too slow</h3>
+      <p>Attacks happen in milliseconds. Human response takes hours. That gap costs crores every incident.</p>
+    </div>
+  </div>
+</section>
+
+<div class="how-it-works" id="solution">
+  <div class="how-inner">
+    <div style="text-align:center;">
+      <div class="section-badge">How MAVA Works</div>
+      <h2 style="font-size:36px;font-weight:700;margin-bottom:16px;">The trap they never see coming</h2>
+      <p style="color:#888;max-width:560px;margin:0 auto;">MAVA deploys convincing fake assets across your network. Attackers think they found something real. The moment they touch it — we have them.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Deploy deception fabric</h3>
+        <p>MAVA automatically plants fake servers, credentials, and databases across your network.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Attacker takes the bait</h3>
+        <p>Real users never touch decoys. Any interaction is guaranteed to be an attacker. Zero false positives.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>AI detects instantly</h3>
+        <p>Our model classifies the attack with 98.68% accuracy and profiles the attacker in milliseconds.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Autonomous response</h3>
+        <p>MAVA blocks, isolates, and contains the threat automatically. No human needed. Under 4 seconds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="product">
+  <div class="section-badge">The Product</div>
+  <h2>Everything you need.<br>Nothing you don't.</h2>
+  <p>MAVA is built specifically for Indian enterprises — banks, NBFCs, IT companies, hospitals. Deploys in hours. No hardware required.</p>
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-tag">DECEPTION</div>
+      <h3>Deception Fabric</h3>
+      <p>Automatically deploys convincing fake assets — SSH servers, web portals, credentials, databases — indistinguishable from real assets.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-tag">AI</div>
+      <h3>AI Detection Engine</h3>
+      <p>98.68% accuracy. Trained on 164,973 real attack samples from CICIDS2018, NSL-KDD, and India-specific honeypot data.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-tag">AUTONOMOUS</div>
+      <h3>Zero-Touch Response</h3>
+      <p>Detects, blocks, isolates, and generates incident reports automatically. Your team wakes up to a solved problem.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-tag">DASHBOARD</div>
+      <h3>Live Attack Dashboard</h3>
+      <p>Real-time feed of every attack attempt. Attacker profiles, geolocation, severity classification, and response log.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-tag">INDIA</div>
+      <h3>India-Specific Intelligence</h3>
+      <p>Trained on Indian attack patterns that no foreign tool understands. UPI fraud, banking trojans, India-targeted threats.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-tag">REPORTS</div>
+      <h3>Automated Incident Reports</h3>
+      <p>One-click PDF reports your CISO can show the board. Complete attack timeline, risk assessment, and remediation steps.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ai-section" id="ai">
+  <div class="ai-inner">
+    <div class="section-badge">AI Model</div>
+    <div class="accuracy">98.68%</div>
+    <div class="accuracy-label">Detection accuracy on real-world attack data</div>
+    <p style="color:#666;margin-top:16px;font-size:15px;">Trained on three datasets covering Western enterprise attacks, classic attack patterns, and India-specific threat intelligence.</p>
+    <div class="dataset-grid">
+      <div class="dataset"><div class="dataset-num">30,000</div><div class="dataset-label">CICIDS2018 records</div></div>
+      <div class="dataset"><div class="dataset-num">125,973</div><div class="dataset-label">NSL-KDD records</div></div>
+      <div class="dataset"><div class="dataset-num">9,000</div><div class="dataset-label">India-specific records</div></div>
+      <div class="dataset"><div class="dataset-num">164,973</div><div class="dataset-label">Total training samples</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section cta-section" id="contact">
+  <div class="section-badge">Get Started</div>
+  <h2>Request a free 30-day pilot</h2>
+  <p>We deploy MAVA in your network. You get a complete security report. No cost. No commitment. Just results.</p>
+  <div class="cta-form">
+    <input type="email" placeholder="your@company.com">
+    <button>Request Pilot</button>
+  </div>
+  <p style="margin-top:16px;font-size:13px;color:#444;">Or email us directly: Geetheswara@Vaultrap.com</p>
+</section>
+
+<footer>
+  <div class="footer-logo">VAULT<span>TRAP</span></div>
+  <div class="footer-links">
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#product">Product</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Vaultrap Security. Built in India.</div>
+</footer>
+
+</body>
+</html>
