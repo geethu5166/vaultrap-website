@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Vaultrap Security MAYA Platform — World's most advanced AI-powered autonomous deception cybersecurity platform. Built for enterprises, startups, and governments worldwide.">
-<title>VAULTRAP | Autonomous Deception & AI Defense</title>
+<title>Vaultrap Security — MAYA Platform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -27,8 +27,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:68px;di
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover{color:var(--g);}
-.nav-cta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;padding:10px 22px;border:1px solid var(--g);color:var(--g);text-decoration:none;text-transform:uppercase;position:relative;overflow:hidden;transition:color 0.3s; animation: pulseGlow 2s infinite;}
-@keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.4); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); } }
+.nav-cta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;padding:10px 22px;border:1px solid var(--g);color:var(--g);text-decoration:none;text-transform:uppercase;position:relative;overflow:hidden;transition:color 0.3s;}
 .nav-cta::before{content:'';position:absolute;inset:0;background:var(--g);transform:translateX(-101%);transition:transform 0.3s;}
 .nav-cta:hover{color:var(--dark);}
 .nav-cta:hover::before{transform:translateX(0);}
@@ -39,7 +38,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:68px;di
 .mobile-nav.open{display:flex;}
 .mobile-nav a{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border2);}
 .mobile-nav a:hover{color:var(--g);}
-
 .hero{min-height:100vh;display:flex;align-items:center;padding:100px 6% 60px;position:relative;overflow:hidden;}
 #particleCanvas{position:absolute;inset:0;opacity:0.4;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border2) 1px,transparent 1px),linear-gradient(90deg,var(--border2) 1px,transparent 1px);background-size:80px 80px;}
@@ -60,20 +58,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 6%;height:68px;di
 .btn-p:hover{background:var(--dark);color:var(--g);box-shadow:0 0 40px rgba(0,255,136,0.2),inset 0 0 0 1px var(--g);}
 .btn-s{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;padding:16px 36px;border:1px solid var(--border);color:var(--muted);text-decoration:none;text-transform:uppercase;transition:all 0.3s;}
 .btn-s:hover{border-color:var(--g);color:var(--g);}
-
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);max-width:700px;}
 .metric{background:var(--dark);padding:22px 24px;position:relative;}
 .metric::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--g);transform:scaleX(0);transition:transform 0.4s;}
 .metric:hover::after{transform:scaleX(1);}
 .m-num{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--g);display:block;}
 .m-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block;}
-
 .ticker{border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:12px 0;overflow:hidden;white-space:nowrap;background:var(--dark2);}
 .ticker-track{display:inline-flex;gap:80px;animation:scroll 40s linear infinite;}
 @keyframes scroll{to{transform:translateX(-50%);}}
 .t-item{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);display:inline-flex;align-items:center;gap:10px;}
 .t-sep{color:var(--g);opacity:0.5;}
-
 section{padding:clamp(80px,10vw,140px) 6%;}
 .s-inner{max-width:1100px;margin:0 auto;}
 .s-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--g);letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:20px;}
@@ -286,7 +281,7 @@ body{cursor:auto;}
 <li><a href="#tracking">Attacker Tracking</a></li>
 <li><a href="#helps">How It Helps</a></li>
 </ul>
-<a href="http://64.227.137.81:5000" class="nav-cta"><span>Launch MAYA SOC →</span></a>
+<a href="#contact" class="nav-cta"><span>Deploy MAYA →</span></a>
 <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 <div class="mobile-nav" id="mobileNav">
@@ -296,7 +291,7 @@ body{cursor:auto;}
 <a href="#fake-assets" onclick="toggleMenu()">Deception</a>
 <a href="#tracking" onclick="toggleMenu()">Attacker Tracking</a>
 <a href="#helps" onclick="toggleMenu()">How It Helps</a>
-<a href="http://64.227.137.81:5000" onclick="toggleMenu()">Launch MAYA SOC</a>
+<a href="#contact" onclick="toggleMenu()">Deploy MAYA</a>
 </div>
 
 <section class="hero">
@@ -306,22 +301,22 @@ body{cursor:auto;}
 <div class="hero-content">
 <div class="hero-eyebrow">
 <div class="eyebrow-line"></div>
-<span class="eyebrow-text">Vaultrap Security / MAYA Platform / Autonomous Defense</span>
+<span class="eyebrow-text">Vaultrap Security / MAYA Platform / Worldwide</span>
 <div class="live-badge"><div class="live-dot"></div>SYSTEM ACTIVE</div>
 </div>
 <h1>
 <span class="l1">Attackers Enter.</span>
 <span class="l2" id="heroLine2"></span>
 </h1>
-<p class="hero-desc">MAYA is the world's most advanced autonomous deception cybersecurity platform. It builds hyper-realistic digital mirrors of your entire infrastructure—trapping, profiling, and neutralizing adversaries before they reach real assets. India's first agentic defense platform.</p>
+<p class="hero-desc">MAYA is the world's most advanced autonomous deception cybersecurity platform. It builds a fake version of your entire digital infrastructure — and turns every attacker who touches it into intelligence. Enterprises, startups, governments, individuals. One platform. Every threat. Every industry. Everywhere.</p>
 <div class="hero-actions">
-<a href="http://64.227.137.81:5000" class="btn-p">Launch Autonomous SOC</a>
-<a href="#who" class="btn-s">// Operational Intelligence</a>
+<a href="#contact" class="btn-p">Deploy Free 30-Day Pilot</a>
+<a href="#who" class="btn-s">// Who Is MAYA For</a>
 </div>
 <div class="metrics">
 <div class="metric"><span class="m-num">98.68%</span><span class="m-label">AI Accuracy</span></div>
-<div class="metric"><span class="m-num">&lt;4sec</span><span class="m-label">Containment</span></div>
-<div class="metric"><span class="m-num">10M+</span><span class="m-label">Training Events</span></div>
+<div class="metric"><span class="m-num">&lt;4sec</span><span class="m-label">Response Time</span></div>
+<div class="metric"><span class="m-num">164K+</span><span class="m-label">Training Samples</span></div>
 <div class="metric"><span class="m-num">ZERO</span><span class="m-label">False Positives</span></div>
 </div>
 </div>
@@ -330,19 +325,19 @@ body{cursor:auto;}
 <div class="ticker">
 <div class="ticker-track">
 <span class="t-item"><span class="t-sep">▸</span>4.5 billion cyberattacks recorded globally in 2025</span>
+<span class="t-item"><span class="t-sep">▸</span>$10.5 trillion in global cybercrime costs by 2025</span>
 <span class="t-item"><span class="t-sep">▸</span>Average attacker dwell time: 60 days undetected</span>
-<span class="t-item"><span class="t-sep">▸</span>MAYA Polymorphic Deception rotates fingerprints every 30 mins</span>
+<span class="t-item"><span class="t-sep">▸</span>MAYA autonomous response: under 4 seconds</span>
 <span class="t-item"><span class="t-sep">▸</span>98.68% AI detection accuracy on real-world attacks</span>
-<span class="t-item"><span class="t-sep">▸</span>Mistral AI Brain handles autonomous forensic investigations</span>
 <span class="t-item"><span class="t-sep">▸</span>Zero false positives — every alert is a confirmed real threat</span>
-<span class="t-item"><span class="t-sep">▸</span>Supports Linux, Windows, Active Directory, and Cloud</span>
+<span class="t-item"><span class="t-sep">▸</span>Works on Linux, Windows, Cloud — all infrastructure types</span>
 <span class="t-item"><span class="t-sep">▸</span>4.5 billion cyberattacks recorded globally in 2025</span>
+<span class="t-item"><span class="t-sep">▸</span>$10.5 trillion in global cybercrime costs by 2025</span>
 <span class="t-item"><span class="t-sep">▸</span>Average attacker dwell time: 60 days undetected</span>
-<span class="t-item"><span class="t-sep">▸</span>MAYA Polymorphic Deception rotates fingerprints every 30 mins</span>
+<span class="t-item"><span class="t-sep">▸</span>MAYA autonomous response: under 4 seconds</span>
 <span class="t-item"><span class="t-sep">▸</span>98.68% AI detection accuracy on real-world attacks</span>
-<span class="t-item"><span class="t-sep">▸</span>Mistral AI Brain handles autonomous forensic investigations</span>
 <span class="t-item"><span class="t-sep">▸</span>Zero false positives — every alert is a confirmed real threat</span>
-<span class="t-item"><span class="t-sep">▸</span>Supports Linux, Windows, Active Directory, and Cloud</span>
+<span class="t-item"><span class="t-sep">▸</span>Works on Linux, Windows, Cloud — all infrastructure types</span>
 </div>
 </div>
 
@@ -351,41 +346,98 @@ body{cursor:auto;}
 <div class="reveal">
 <div class="s-label">Who MAYA Is For</div>
 <h2 class="s-title">Built for every organization<br>that has something to protect.</h2>
-<p class="s-desc">Cybercriminals target value, not size. MAYA provides enterprise-grade autonomous protection scaled for every organization type.</p>
+<p class="s-desc">MAYA is not limited to one type of company. If you have a network, a server, a website, or digital infrastructure — you are a target. MAYA is for you.</p>
 </div>
 <div class="who-grid">
 <div class="who-card reveal">
 <div class="who-icon">ENT</div>
 <h3>Enterprises</h3>
-<p>Large corporations with multi-site infrastructure. MAYA deploys across your entire network—data centers, cloud, and branches—monitoring everything with zero human overhead through Agentic AI.</p>
+<p>Large corporations with complex multi-site infrastructure, thousands of employees, critical data, and high-value targets. MAYA deploys across your entire network — data centers, cloud, branches — and monitors everything simultaneously with zero human overhead.</p>
 <div class="who-tags">
 <span class="who-tag">Banks</span>
-<span class="who-tag">Telecom</span>
+<span class="who-tag">Insurance</span>
 <span class="who-tag">Manufacturing</span>
+<span class="who-tag">Retail Chains</span>
+<span class="who-tag">Telecom</span>
 <span class="who-tag">Pharma</span>
 </div>
 </div>
 <div class="who-card reveal">
 <div class="who-icon">STR</div>
 <h3>Startups</h3>
-<p>Fast-growing startups with critical IP but no SOC team. MAYA is your entire security department in one platform—deployed in under 30 minutes and running 24/7 for a fraction of the cost.</p>
+<p>Fast-growing startups with valuable IP, customer data, and no dedicated security team. You can't afford a full SOC. MAYA is your entire security team in one platform — deployed in hours, running autonomously, alerting you only when something real happens.</p>
 <div class="who-tags">
 <span class="who-tag">Fintech</span>
 <span class="who-tag">SaaS</span>
+<span class="who-tag">Edtech</span>
 <span class="who-tag">Healthtech</span>
 <span class="who-tag">E-commerce</span>
+<span class="who-tag">B2B Tech</span>
 </div>
 </div>
 <div class="who-card reveal">
 <div class="who-icon">GOV</div>
 <h3>Governments & Defense</h3>
-<p>Sovereign, on-premise defense for national infrastructure. MAYA runs fully air-gapped if required, ensuring critical data and threat intelligence never leave your secure perimeter.</p>
+<p>Government agencies, defense establishments, public sector units, and critical national infrastructure. MAYA runs fully on-premise — your data never leaves your network. No cloud dependency. No foreign servers. Complete sovereignty.</p>
 <div class="who-tags">
 <span class="who-tag">Defense</span>
 <span class="who-tag">Public Sector</span>
+<span class="who-tag">Critical Infrastructure</span>
+<span class="who-tag">Police</span>
 <span class="who-tag">Intelligence</span>
-<span class="who-tag">Grid Control</span>
 </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sectors-section" id="sectors">
+<div class="s-inner">
+<div class="reveal">
+<div class="s-label">Industries We Protect</div>
+<h2 class="s-title">Every sector. Every<br>attack surface covered.</h2>
+<p class="s-desc">Cybercriminals don't discriminate. Neither does MAYA. Every industry with digital infrastructure is a target — and MAYA is trained and ready for all of them.</p>
+</div>
+<div class="sectors-grid">
+<div class="sector-card reveal">
+<div class="sector-num">01</div>
+<h3>Banking & Financial Services</h3>
+<p>Fake core banking portals, decoy transaction systems, honeypot ATM interfaces, fake SWIFT endpoints. Catches attackers targeting financial infrastructure before they reach real accounts or funds.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">02</div>
+<h3>Healthcare & Hospitals</h3>
+<p>Fake patient databases, decoy medical record systems, honeypot lab portals. Ransomware targeting hospitals is among the fastest growing threats globally — MAYA catches it before encryption begins.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">03</div>
+<h3>Government & Defense</h3>
+<p>Decoy classified portals, fake government databases, honeypot military systems. Nation-state actors and APT groups are caught the moment they interact with MAYA's deception layer.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">04</div>
+<h3>E-commerce & Retail</h3>
+<p>Fake payment gateways, decoy customer databases, honeypot inventory systems. Card skimming, credential stuffing, and supply chain attacks caught before customer data is compromised.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">05</div>
+<h3>Technology & SaaS</h3>
+<p>Fake API endpoints, decoy source code repositories, honeypot developer credentials. Protects intellectual property, customer data, and cloud infrastructure from sophisticated attackers.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">06</div>
+<h3>Education & Research</h3>
+<p>Fake research databases, decoy student records, honeypot faculty credentials. Universities are increasingly targeted for research IP and student data — MAYA provides enterprise-grade protection at startup pricing.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">07</div>
+<h3>Manufacturing & Industry</h3>
+<p>Fake SCADA systems, decoy industrial control interfaces, honeypot OT network assets. Protects critical manufacturing infrastructure from ransomware and nation-state sabotage attempts.</p>
+</div>
+<div class="sector-card reveal">
+<div class="sector-num">08</div>
+<h3>Telecom & Media</h3>
+<p>Fake subscriber databases, decoy network management systems, honeypot billing portals. Protects millions of customer records and critical communication infrastructure from breach.</p>
 </div>
 </div>
 </div>
@@ -394,38 +446,52 @@ body{cursor:auto;}
 <section class="deception-section" id="how-deception">
 <div class="s-inner">
 <div class="reveal">
-<div class="s-label">How MAYA Works</div>
+<div class="s-label">How MAYA Deception Works</div>
 <h2 class="s-title">The most sophisticated trap<br>ever deployed at scale.</h2>
-<p class="s-desc">Traditional security builds walls. Walls break. MAYA builds a parallel fake world inside your network—and turns every attacker who enters it into actionable intelligence.</p>
+<p class="s-desc">Traditional security builds walls. Walls get broken. MAYA builds a parallel fake world inside your real one — and every attacker who enters it gets studied, profiled, and destroyed.</p>
 </div>
 <div class="deception-layout">
 <div class="deception-steps reveal">
 <div class="d-step">
 <span class="d-step-num">01</span>
 <div class="d-step-content">
-<h3>Polymorphic Deception</h3>
-<p>Unlike static honeypots, MAYA decoys rotate fingerprints, OS signatures, and response behaviors every 30 minutes. Attackers cannot identify them as traps through reconnaissance.</p>
+<h3>Network Intelligence Scan</h3>
+<p>MAYA silently scans your entire real network — every server, every service, every open port, every running application. It builds a complete digital map of your infrastructure without disrupting anything.</p>
 </div>
 </div>
 <div class="d-step">
 <span class="d-step-num">02</span>
 <div class="d-step-content">
-<h3>Attacker DNA Profiling</h3>
-<p>We analyze keystroke rhythm, tool signatures, and command sequences to build a permanent identity for hackers, even if they change VPNs, IPs, or devices.</p>
+<h3>Mirror Deception Layer Creation</h3>
+<p>Using the network map, MAYA automatically generates a parallel fake infrastructure that perfectly mirrors your real one. Fake servers respond exactly like your real servers. Fake credentials look exactly like real ones. Fake databases have realistic-looking data. An attacker cannot tell the difference.</p>
 </div>
 </div>
 <div class="d-step">
 <span class="d-step-num">03</span>
 <div class="d-step-content">
-<h3>GNN Lateral Movement Mapping</h3>
-<p>Graph Neural Networks visualize attacker movement across your infrastructure in real-time, predicting their next move before they reach your real production assets.</p>
+<h3>Strategic Decoy Placement</h3>
+<p>Fake assets are placed precisely on the paths an attacker is most likely to take — discovered through reconnaissance, lateral movement corridors, credential stores, and high-value targets. MAYA predicts where an attacker will go and puts a trap there before they arrive.</p>
 </div>
 </div>
 <div class="d-step">
 <span class="d-step-num">04</span>
 <div class="d-step-content">
-<h3>Mistral Agentic Response</h3>
-<p>Once a threat is confirmed, the Mistral-powered AI brain launches a 100-step forensic investigation, generates firewall rules, and contains the threat in under 4 seconds.</p>
+<h3>Guaranteed Detection</h3>
+<p>Real users, real systems, and real processes never interact with fake assets. They have no reason to. Only an attacker — who is exploring your network looking for something to exploit — will ever touch a decoy. Every single interaction with any decoy is a confirmed real attack. Zero false positives. Mathematically guaranteed.</p>
+</div>
+</div>
+<div class="d-step">
+<span class="d-step-num">05</span>
+<div class="d-step-content">
+<h3>Attacker Trapped in Fake World</h3>
+<p>Once an attacker touches a decoy, MAYA doesn't immediately block them. It routes them deeper into the fake environment — letting them waste time on fake data while MAYA studies everything about them. Every tool they use. Every technique. Every command. Every target.</p>
+</div>
+</div>
+<div class="d-step">
+<span class="d-step-num">06</span>
+<div class="d-step-content">
+<h3>Autonomous Elimination</h3>
+<p>When MAYA has enough intelligence, it executes: real IP blocked at firewall level, all compromised credentials revoked, all affected systems isolated, full forensic report generated, security team alerted with complete attacker profile. Under 4 seconds. No human needed.</p>
 </div>
 </div>
 </div>
@@ -435,19 +501,29 @@ body{cursor:auto;}
 <div class="t-dot" style="background:#ff5f57;"></div>
 <div class="t-dot" style="background:#febc2e;"></div>
 <div class="t-dot" style="background:#28c840;"></div>
-<span class="t-title">MAYA LIVE AGENT — NEURAL INTERFACE</span>
+<span class="t-title">MAYA LIVE TERMINAL — REAL-TIME FEED</span>
 </div>
 <div class="terminal-body">
-<div class="t-line"><span class="t-prompt">maya@sys:~$</span><span class="t-cmd"> detect.start_profiling()</span></div>
-<div class="t-line"><span class="t-out">  [+] Monitoring GNN nodes...</span></div>
-<div class="t-line"><span class="t-success">  [✓] Polymorphic rotation active (CentOS 7)</span></div>
-<div class="t-line" style="margin-top:12px;"><span class="t-alert">  [!] BREACH DETECTED: Decoy AD Controller</span></div>
-<div class="t-line"><span class="t-out">  [+] Building Attacker DNA...</span></div>
-<div class="t-line"><span class="t-warn">  [~] Tool detected: Cobalt Strike Beacon</span></div>
-<div class="t-line"><span class="t-success">  [✓] Identity Match: APT-28 Signature</span></div>
-<div class="t-line"><span class="t-success">  [✓] Autonomous Block: IP 185.220.101.47</span></div>
-<div class="t-line"><span class="t-out">  [+] MTTR: 0.8 seconds</span></div>
-<div class="t-line" style="margin-top:8px;"><span class="t-prompt">maya@sys:~$</span><span class="t-cmd"> </span><span class="t-cursor"></span></div>
+<div class="t-line"><span class="t-prompt">maya@sec:~$</span><span class="t-cmd"> system.initialize()</span></div>
+<div class="t-line"><span class="t-out">  [+] Scanning network topology...</span></div>
+<div class="t-line"><span class="t-out">  [+] 847 real assets mapped</span></div>
+<div class="t-line"><span class="t-out">  [+] Generating deception fabric...</span></div>
+<div class="t-line"><span class="t-success">  [✓] 312 decoys deployed successfully</span></div>
+<div class="t-line"><span class="t-out">  [+] Honeytokens planted: 1,247</span></div>
+<div class="t-line"><span class="t-success">  [✓] MAYA deception layer ACTIVE</span></div>
+<div class="t-line" style="margin-top:12px;"><span class="t-prompt">maya@sec:~$</span><span class="t-cmd"> monitor.start()</span></div>
+<div class="t-line"><span class="t-out">  [+] Watching 312 decoys...</span></div>
+<div class="t-line"><span class="t-out">  [+] 0 alerts — all systems nominal</span></div>
+<div class="t-line" style="margin-top:12px;"><span class="t-alert">  [!] ALERT: Decoy DB touched — 185.220.101.47</span></div>
+<div class="t-line"><span class="t-warn">  [~] Routing attacker to fake environment...</span></div>
+<div class="t-line"><span class="t-out">  [+] Mistral AI analyzing threat...</span></div>
+<div class="t-line"><span class="t-out">  [+] MITRE: T1110.001 — Brute Force</span></div>
+<div class="t-line"><span class="t-out">  [+] Risk score: 94/100 — CRITICAL</span></div>
+<div class="t-line"><span class="t-success">  [✓] IP 185.220.101.47 — BLOCKED</span></div>
+<div class="t-line"><span class="t-success">  [✓] Credentials revoked — 0.8 seconds</span></div>
+<div class="t-line"><span class="t-success">  [✓] Incident report generated</span></div>
+<div class="t-line"><span class="t-success">  [✓] Team alerted — total time: 3.2s</span></div>
+<div class="t-line" style="margin-top:8px;"><span class="t-prompt">maya@sec:~$</span><span class="t-cmd"> </span><span class="t-cursor"></span></div>
 </div>
 </div>
 </div>
@@ -458,30 +534,273 @@ body{cursor:auto;}
 <section class="assets-section" id="fake-assets">
 <div class="s-inner">
 <div class="reveal">
-<div class="s-label">Deception Layers</div>
-<h2 class="s-title">Indistinguishable from reality.<br>Lethal to adversaries.</h2>
+<div class="s-label">How Fake Assets Work</div>
+<h2 class="s-title">Every asset an attacker<br>wants — all fake. All traps.</h2>
 </div>
 <div class="assets-intro reveal">
-<p>MAYA auto-generates replicas of your most valuable assets. These decoys look and behave exactly like your real systems. When a hacker interacts, MAYA catches them with zero false positives.</p>
+<p>MAYA creates convincing replicas of the most valuable digital assets in any organization. These fakes are indistinguishable from the real thing to any attacker. When they interact — MAYA catches them. Here is exactly how each type of fake asset works and how it traps attackers.</p>
 </div>
 <div class="assets-grid">
 <div class="asset-card reveal">
-<div class="asset-tag">Active Directory</div>
-<h3>Windows AD Decoys</h3>
-<p>Realistic fake AD environments with decoy user accounts and group policies. Catches credential harvesters and lateral movement attempts targeting the heart of your enterprise.</p>
-<div class="asset-how">Detects: Pass-the-Hash, Kerberoasting, and BloodHound reconnaissance.</div>
+<div class="asset-tag">Fake Web Portal</div>
+<h3>Bank & Enterprise Login Pages</h3>
+<p>MAYA creates pixel-perfect replicas of your organization's login portals — internet banking, employee VPN, admin panels, customer portals. These fake portals are placed on internal network paths where an attacker doing reconnaissance would find them. They look and respond exactly like your real portals.</p>
+<div class="asset-how">When an attacker enters credentials → MAYA captures their IP, browser fingerprint, username/password attempt, timing patterns, and the attack tool they used. Then shows "wrong password" — they try again. More intelligence captured.</div>
 </div>
 <div class="asset-card reveal">
-<div class="asset-tag">Data Layer</div>
-<h3>SQL & NoSQL Traps</h3>
-<p>Fake MySQL, PostgreSQL, and Redis servers containing convincingly realistic but "poisoned" fake data. Attackers waste time exfiltrating data that actually tracks them.</p>
-<div class="asset-how">Detects: SQL injection, unauthenticated DB access, and mass data scraping.</div>
+<div class="asset-tag">Fake Database Servers</div>
+<h3>SQL, NoSQL, Redis Decoys</h3>
+<p>Fake MySQL, PostgreSQL, MongoDB, and Redis servers that respond exactly like real databases. They contain convincingly realistic fake data — fake customer records, fake financial transactions, fake employee data. Attackers connect, run queries, and think they found gold.</p>
+<div class="asset-how">Every query an attacker runs is logged. What they're looking for reveals their intent. Are they after customer PII? Financial records? Employee passwords? MAYA profiles their target and predicts their next move in real infrastructure.</div>
 </div>
 <div class="asset-card reveal">
-<div class="asset-tag">Cloud / DevOps</div>
-<h3>Honeytoken Mesh</h3>
-<p>Invisible tripwires like fake AWS keys and GitHub tokens planted in config files. The moment an attacker steals or uses them, MAYA gets their real source IP.</p>
-<div class="asset-how">Detects: Insider theft, supply chain leaks, and compromised S3 buckets.</div>
+<div class="asset-tag">Honeytokens</div>
+<h3>Fake Credentials & API Keys</h3>
+<p>Fake AWS keys, API tokens, database passwords, and admin credentials are planted throughout your real infrastructure — in config files, code repositories, environment variables, emails, and documents. They look completely real and legitimate.</p>
+<div class="asset-how">The moment an attacker steals a honeytoken and attempts to use it anywhere in the world — MAYA receives an instant alert with their real IP, location, and what they tried to access. Even if they're behind a VPN. The usage attempt reveals them.</div>
+</div>
+<div class="asset-card reveal">
+<div class="asset-tag">Fake SSH Servers</div>
+<h3>Decoy Linux & Windows Servers</h3>
+<p>Fake SSH servers that respond to connection attempts, present a realistic banner, and accept the beginning of authentication flows. Attackers attempting brute force or credential stuffing connect and begin their attack — thinking they found a real server.</p>
+<div class="asset-how">Every username tried, every password attempted, every timing pattern, every tool signature is captured. Attackers who brute-force multiple times build a complete profile — we learn their password lists, their tools, and their methodology.</div>
+</div>
+<div class="asset-card reveal">
+<div class="asset-tag">Fake Windows AD</div>
+<h3>Active Directory Decoys</h3>
+<p>Fake Windows Active Directory environments with realistic-looking user accounts, group policies, and domain structure. Attackers targeting Windows enterprise environments always go for AD — it controls everything. MAYA puts a fake AD in their path.</p>
+<div class="asset-how">Attackers attempting AD enumeration, pass-the-hash, kerberoasting, or DCSync attacks against the fake AD reveal their entire Windows attack toolkit. MAYA uses this to harden the real AD against the exact techniques being used.</div>
+</div>
+<div class="asset-card reveal">
+<div class="asset-tag">Fake Cloud Assets</div>
+<h3>AWS, Azure, GCP Decoys</h3>
+<p>Fake S3 buckets with convincing names, fake Azure storage accounts, fake GCP service accounts — all with honeytokens embedded. Attackers targeting misconfigured cloud assets find these first and expose themselves before reaching any real cloud infrastructure.</p>
+<div class="asset-how">Cloud honeytokens use legitimate cloud provider APIs — when an attacker uses a fake AWS key, Amazon's own systems log the attempt and MAYA receives an alert with the attacker's real source IP, even if they used a VPN or proxy.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="tracking-section" id="tracking">
+<div class="s-inner">
+<div class="reveal">
+<div class="s-label">How MAYA Finds Attackers</div>
+<h2 class="s-title">Even when they hide.<br>Even on the real site.</h2>
+<p class="s-desc">Attackers use VPNs, proxies, and Tor to hide their identity. Some attack your real systems directly, not your decoys. MAYA tracks them through all of it.</p>
+</div>
+<div class="tracking-layout">
+<div class="tracking-steps reveal">
+<div class="track-step">
+<div class="track-step-header">
+<div class="track-icon">T1</div>
+<h3>Behavioral Fingerprinting</h3>
+</div>
+<p>Every attacker has unconscious behavioral patterns — the sequence of commands they run, the tools they use in a specific order, the timing between keystrokes, the mistakes they make. MAYA builds a unique behavioral DNA profile from every interaction with decoys. When the same attacker attacks a different organization using MAYA — they're recognized instantly even with a completely different IP address.</p>
+</div>
+<div class="track-step">
+<div class="track-step-header">
+<div class="track-icon">T2</div>
+<h3>Honeytoken Tracking on Real Sites</h3>
+</div>
+<p>MAYA plants tracking honeytokens inside your real website and real systems — invisible tracking pixels in documents, unique tokens in web responses, canary tokens in files. Even if an attacker never touches a decoy and attacks your real site directly, the moment they open a document they stole or use a credential they captured — the honeytoken fires and exposes them.</p>
+</div>
+<div class="track-step">
+<div class="track-step-header">
+<div class="track-icon">T3</div>
+<h3>IP Intelligence Cross-Reference</h3>
+</div>
+<p>MAYA cross-references every attacker IP against 5+ global threat intelligence databases in real time. Even if an attacker uses a VPN, MAYA checks if the VPN IP has been used in previous attacks, identifies the VPN provider, checks for Tor exit node usage, and calculates a fraud score. Most attackers reuse infrastructure — MAYA exploits this.</p>
+</div>
+<div class="track-step">
+<div class="track-step-header">
+<div class="track-icon">T4</div>
+<h3>Counter-Intelligence Data Payload</h3>
+</div>
+<p>When an attacker successfully "steals" data from a MAYA decoy, the stolen data contains a hidden tracking payload. The moment the attacker opens the stolen files on their own machine — even offline — the payload sends their real IP, device fingerprint, OS details, and geolocation back to MAYA. This exposes their real identity regardless of how carefully they hid during the attack.</p>
+</div>
+<div class="track-step">
+<div class="track-step-header">
+<div class="track-icon">T5</div>
+<h3>MITRE ATT&CK Attribution</h3>
+</div>
+<p>Every action an attacker takes maps to specific MITRE ATT&CK techniques. MAYA's AI correlates these technique sequences against known threat actor playbooks — identifying whether the attacker is a script kiddie, organized cybercriminal, ransomware group, or nation-state APT. This attribution informs both the immediate response and long-term defensive hardening.</p>
+</div>
+</div>
+<div class="reveal" style="position:sticky;top:100px;">
+<div class="attacker-profile">
+<div class="ap-header">
+<span>// ATTACKER PROFILE — LIVE</span>
+<span class="ap-status">● CONTAINED</span>
+</div>
+<div class="ap-body">
+<div class="ap-row"><span class="ap-key">Source IP</span><span class="ap-val danger">185.220.101.47</span></div>
+<div class="ap-row"><span class="ap-key">VPN Provider</span><span class="ap-val warn">Mullvad VPN — DE</span></div>
+<div class="ap-row"><span class="ap-key">Real Location</span><span class="ap-val">Est. Eastern Europe</span></div>
+<div class="ap-row"><span class="ap-key">Threat Actor</span><span class="ap-val warn">APT — Unknown Group</span></div>
+<div class="ap-row"><span class="ap-key">Attack Type</span><span class="ap-val danger">Credential Stuffing</span></div>
+<div class="ap-row"><span class="ap-key">MITRE Tech</span><span class="ap-val">T1110.003</span></div>
+<div class="ap-row"><span class="ap-key">Risk Score</span><span class="ap-val danger">94/100 CRITICAL</span></div>
+<div class="ap-row"><span class="ap-key">Tools Detected</span><span class="ap-val">Hydra, custom script</span></div>
+<div class="ap-row"><span class="ap-key">Target Intent</span><span class="ap-val warn">Financial credentials</span></div>
+<div class="ap-row"><span class="ap-key">First Seen</span><span class="ap-val">3 days ago (other org)</span></div>
+<div class="ap-actions">
+<div class="ap-action done">IP blocked at firewall</div>
+<div class="ap-action done">Credentials revoked</div>
+<div class="ap-action done">Systems isolated</div>
+<div class="ap-action done">Report generated</div>
+<div class="ap-action pending">CERT notification sent</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="helps-section" id="helps">
+<div class="s-inner">
+<div class="reveal">
+<div class="s-label">How MAYA Helps You</div>
+<h2 class="s-title">Not just protection.<br>Total transformation.</h2>
+<p class="s-desc">MAYA doesn't just stop attacks. It fundamentally changes how your organization understands, responds to, and learns from cyber threats.</p>
+</div>
+<div class="helps-grid">
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">01</div>
+<div>
+<div class="help-title">Eliminates Alert Fatigue</div>
+<div class="help-subtitle">// Zero false positives</div>
+</div>
+</div>
+<p>Traditional security tools generate thousands of alerts daily. Security teams spend 90% of their time investigating false positives and miss real threats. MAYA generates zero false positives — mathematically guaranteed. Every alert is a confirmed real attack. Your security team focuses only on what matters.</p>
+<ul class="help-list">
+<li>Real users never touch decoys — every alert is real</li>
+<li>Security teams reclaim 90% of investigation time</li>
+<li>Critical threats are never buried in noise</li>
+<li>Faster incident response when it actually matters</li>
+</ul>
+</div>
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">02</div>
+<div>
+<div class="help-title">Closes the 60-Day Gap</div>
+<div class="help-subtitle">// From months to seconds</div>
+</div>
+</div>
+<p>The average attacker hides inside networks for 60 days before detection. In that time they map your infrastructure, steal credentials, exfiltrate data, and establish persistence. MAYA closes this gap completely — any attacker who enters your network touches a decoy within minutes and is detected within seconds.</p>
+<ul class="help-list">
+<li>Detection in seconds instead of 60 days</li>
+<li>Attackers caught during reconnaissance — before damage</li>
+<li>No long-term attacker persistence possible</li>
+<li>Breach cost reduced by eliminating dwell time</li>
+</ul>
+</div>
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">03</div>
+<div>
+<div class="help-title">Replaces Your SOC Team</div>
+<div class="help-subtitle">// Autonomous 24/7 analyst</div>
+</div>
+</div>
+<p>A fully staffed Security Operations Center costs $2-5 million annually. MAYA's AI SOC analyst works 24/7/365, never misses an alert, never gets tired, never makes human errors, and responds in under 4 seconds every single time. For organizations that can't afford a full SOC — MAYA makes enterprise-grade security accessible.</p>
+<ul class="help-list">
+<li>Mistral AI reasons about every threat like a senior analyst</li>
+<li>MITRE ATT&CK technique identification automatic</li>
+<li>Complete incident reports generated without human input</li>
+<li>Board-ready PDF reports at the click of a button</li>
+</ul>
+</div>
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">04</div>
+<div>
+<div class="help-title">Turns Attacks Into Intelligence</div>
+<div class="help-subtitle">// Every attacker makes you stronger</div>
+</div>
+</div>
+<p>Every attacker MAYA catches teaches your defenses something new. Their tools, techniques, targets, and behavioral patterns are captured and analyzed. This intelligence is used to harden your real infrastructure against the exact attacks being attempted — and shared (anonymized) across all MAYA deployments to protect the entire ecosystem.</p>
+<ul class="help-list">
+<li>Attacker tool signatures captured and analyzed</li>
+<li>Real infrastructure hardened based on attack intelligence</li>
+<li>Attack predictions based on observed attacker behavior</li>
+<li>Collective defense — each deployment protects all others</li>
+</ul>
+</div>
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">05</div>
+<div>
+<div class="help-title">Ensures Regulatory Compliance</div>
+<div class="help-subtitle">// Audit-ready always</div>
+</div>
+</div>
+<p>Regulators worldwide — RBI, SEBI, HIPAA, GDPR, ISO 27001, SOC 2 — require organizations to demonstrate active threat detection and incident response capabilities. MAYA generates comprehensive, timestamped, immutable records of every security event, every response action, and every system state — giving you audit-ready compliance documentation automatically.</p>
+<ul class="help-list">
+<li>Automatic compliance reporting for all major frameworks</li>
+<li>Immutable audit trail of every security event</li>
+<li>Incident response documentation generated automatically</li>
+<li>Demonstrates active security posture to regulators</li>
+</ul>
+</div>
+<div class="help-card reveal">
+<div class="help-card-header">
+<div class="help-num">06</div>
+<div>
+<div class="help-title">Protects What Others Miss</div>
+<div class="help-subtitle">// Insider threats & zero-days</div>
+</div>
+</div>
+<p>Traditional security focuses on external perimeter defense. MAYA operates inside your network — which means it catches insider threats (employees accessing decoys they have no business accessing), zero-day attacks (detected by behavior not signature), and supply chain compromises (third-party access to fake assets reveals compromised vendors).</p>
+<ul class="help-list">
+<li>Insider threats detected when they access decoys</li>
+<li>Zero-day attacks caught by behavioral AI — not signatures</li>
+<li>Supply chain attacks revealed through honeytoken usage</li>
+<li>Compromised vendor accounts identified immediately</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="features-section" id="features">
+<div class="s-inner">
+<div class="reveal">
+<div class="s-label">Platform Capabilities</div>
+<h2 class="s-title">The complete MAYA<br>platform.</h2>
+</div>
+<div class="feat-grid">
+<div class="feat-card reveal">
+<div class="feat-tag">Deception</div>
+<h3>Full Deception Fabric</h3>
+<p>SSH honeypots, fake web portals, database decoys, API honeytokens, fake Windows credentials, cloud asset decoys — automatically deployed across Linux, Windows, and cloud. Every decoy is indistinguishable from your real infrastructure.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-tag">AI Engine</div>
+<h3>98.68% Accurate Detection</h3>
+<p>Random Forest + Isolation Forest ensemble trained on 164,973 real attack samples from CICIDS2018, NSL-KDD, and live honeypot data. Detects 20+ attack categories. Behavioral AI catches zero-days that signature tools miss entirely.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-tag">Autonomous</div>
+<h3>Zero-Touch Response</h3>
+<p>Mistral AI reasons about every alert. Executes autonomous response — block, isolate, revoke, report — in under 4 seconds. Generates board-ready PDF incident reports automatically. No human required at any step.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-tag">Windows</div>
+<h3>Windows Agent</h3>
+<p>Lightweight Windows agent monitors Event Logs, detects RDP brute force, lateral movement, privilege escalation, ransomware behavior, and honeytoken access. Reports everything to MAYA central dashboard in real time.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-tag">Intelligence</div>
+<h3>Global Threat Intelligence</h3>
+<p>Live threat feeds from global sources. Real-time CVE monitoring. IP reputation against 5+ threat databases. MITRE ATT&CK technique mapping. Attacker behavioral DNA profiling. Counter-intelligence payload tracking.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-tag">SOC AI</div>
+<h3>AI SOC Analyst</h3>
+<p>Replaces hours of manual SOC work. Checks IP reputation. Identifies MITRE ATT&CK techniques. Calculates risk scores. Profiles attacker intent and next moves. Generates detailed incident timeline. All automatically.</p>
 </div>
 </div>
 </div>
@@ -490,8 +809,8 @@ body{cursor:auto;}
 <section class="ai-section" id="ai">
 <div class="s-inner">
 <div class="reveal">
-<div class="s-label">Sovereign Intelligence</div>
-<h2 class="s-title">Trained on 10M+ attacks.<br>Engineered for certainty.</h2>
+<div class="s-label">AI Model</div>
+<h2 class="s-title">Trained on real attacks.<br>Not textbooks.</h2>
 </div>
 <div class="ai-layout">
 <div class="reveal">
@@ -502,17 +821,31 @@ body{cursor:auto;}
 </svg>
 <div class="accuracy-center">
 <div class="acc-num">98.68%</div>
-<div class="acc-label">AI PRECISION</div>
+<div class="acc-label">ACCURACY</div>
 </div>
 </div>
-<p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);line-height:1.9;max-width:340px;">Utilizing Federated Learning on 10 Million+ real-world attack samples from CICIDS2018, NSL-KDD, and our global honeypot network.</p>
+<p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);line-height:1.9;max-width:340px;">Three real-world datasets. 164,973 labeled attack samples. Continuous learning from live global honeypot deployments. Behavioral AI that detects zero-days by pattern — not signature.</p>
 </div>
 <div class="reveal">
 <div class="datasets">
-<div class="ds-row"><span class="ds-name">// Enterprise Traffic Datasets</span><span class="ds-count">5,600,000+</span></div>
-<div class="ds-row"><span class="ds-name">// Classic Intrusion Patterns</span><span class="ds-count">3,200,000+</span></div>
-<div class="ds-row"><span class="ds-name">// Live Real-World Attack Logs</span><span class="ds-count">1,200,000+</span></div>
-<div class="ds-row" style="border-top:1px solid var(--border);"><span class="ds-name" style="color:var(--g);">// Total Neural Training Base</span><span class="ds-count">10,000,000+</span></div>
+<div class="ds-row"><span class="ds-name">// CICIDS2018 — Western enterprise attacks</span><span class="ds-count">30,000</span></div>
+<div class="ds-row"><span class="ds-name">// NSL-KDD — Classic intrusion patterns</span><span class="ds-count">125,973</span></div>
+<div class="ds-row"><span class="ds-name">// Live Honeypot — Real-world attack data</span><span class="ds-count">9,000</span></div>
+<div class="ds-row" style="border-top:1px solid var(--border);"><span class="ds-name" style="color:var(--g);">// Total training samples</span><span class="ds-count">164,973</span></div>
+</div>
+<div class="at-grid">
+<div class="at-item">SSH Brute Force</div>
+<div class="at-item">RDP Attacks</div>
+<div class="at-item">Credential Harvesting</div>
+<div class="at-item">Lateral Movement</div>
+<div class="at-item">Ransomware Behavior</div>
+<div class="at-item">Privilege Escalation</div>
+<div class="at-item">Port Scanning</div>
+<div class="at-item">C2 Communication</div>
+<div class="at-item">Web App Attacks</div>
+<div class="at-item">Zero-Day Behavior</div>
+<div class="at-item">Honeytoken Access</div>
+<div class="at-item">Insider Threats</div>
 </div>
 </div>
 </div>
@@ -522,14 +855,14 @@ body{cursor:auto;}
 <section class="cta-section" id="contact">
 <div class="s-inner">
 <div class="cta-box reveal">
-<div class="s-label" style="justify-content:center;margin-bottom:24px;">Global Defense Network</div>
-<h2>Secure your infrastructure<br>with Vaultrap MAYA.</h2>
-<p>Deploy India's first fully autonomous deception defense. Get a full security report showing every vulnerability and attacker identity in 30 days. No cost. No risk.</p>
+<div class="s-label" style="justify-content:center;margin-bottom:24px;">Free 30-Day Pilot — Worldwide</div>
+<h2>Deploy MAYA in your<br>network today.</h2>
+<p>We handle the complete deployment. You get a full security report showing every threat MAYA caught, every attacker it stopped, every vulnerability it found. No cost. No commitment. No risk. Available worldwide.</p>
 <div class="cta-form">
-<input type="email" class="cta-input" placeholder="Enter work email" id="ctaEmail">
-<button class="cta-btn" onclick="submitCTA()">Deploy Platform →</button>
+<input type="email" class="cta-input" placeholder="your@company.com" id="ctaEmail">
+<button class="cta-btn" onclick="submitCTA()">Deploy →</button>
 </div>
-<p class="cta-note">Sovereign Defense: <a href="mailto:Geetheswara@Vaultrap.com">Geetheswara@Vaultrap.com</a></p>
+<p class="cta-note">Or reach us: <a href="mailto:Geetheswara@Vaultrap.com">Geetheswara@Vaultrap.com</a></p>
 </div>
 </div>
 </section>
@@ -539,28 +872,33 @@ body{cursor:auto;}
 <div class="footer-top">
 <div>
 <div class="f-logo"><div class="nav-logo-icon" style="width:20px;height:20px;"></div><span><span class="v">VAULT</span>RAP</span></div>
-<p class="f-tagline">Advanced autonomous deception cybersecurity. Designed for the world's most critical digital environments.</p>
+<p class="f-tagline">The world's most advanced autonomous deception cybersecurity platform. Built for enterprises, startups, and governments worldwide.</p>
 </div>
 <div class="f-col">
-<h4>Capability</h4>
-<a href="#deception">Polymorphic Decoys</a>
-<a href="#ai">Agentic LLM</a>
-<a href="#tracking">Attacker DNA</a>
+<h4>Platform</h4>
+<a href="#who">Who It's For</a>
+<a href="#sectors">Industries</a>
+<a href="#how-deception">How It Works</a>
+<a href="#fake-assets">Fake Assets</a>
+<a href="#tracking">Attacker Tracking</a>
+<a href="#helps">How It Helps</a>
 </div>
 <div class="f-col">
-<h4>Resources</h4>
-<a href="https://github.com/geethu5166/maya-mvp">GitHub Repo</a>
-<a href="http://64.227.137.81:5000">Live Dashboard</a>
+<h4>Company</h4>
+<a href="https://github.com/geethu5166/maya-mvp">GitHub</a>
+<a href="#contact">Request Demo</a>
+<a href="mailto:Geetheswara@Vaultrap.com">Contact</a>
 </div>
 <div class="f-col">
-<h4>Direct</h4>
-<a href="mailto:Geetheswara@Vaultrap.com">Email Founder</a>
-<a href="#">24/7 Response Team</a>
+<h4>Contact</h4>
+<a href="mailto:Geetheswara@Vaultrap.com">Geetheswara@Vaultrap.com</a>
+<a href="#">Worldwide Deployment</a>
+<a href="#">24/7 Support</a>
 </div>
 </div>
 <div class="footer-bottom">
-<div class="f-copy">© 2026 Vaultrap Security Technologies. All rights reserved.</div>
-<div class="f-status"><div class="live-dot"></div>MAYA AGENT OPERATIONAL</div>
+<div class="f-copy">© 2026 Vaultrap Security. All rights reserved. Worldwide.</div>
+<div class="f-status"><div class="live-dot"></div>MAYA PLATFORM OPERATIONAL</div>
 </div>
 </div>
 </footer>
@@ -595,7 +933,15 @@ setTimeout(()=>{const t=setInterval(()=>{el.textContent+=txt[i++];if(i>=txt.leng
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,idx)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),idx*60);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
-function submitCTA(){window.location.href="http://64.227.137.81:5000";}
+function submitCTA(){
+const email=document.getElementById('ctaEmail').value;
+if(!email||!email.includes('@')){document.getElementById('ctaEmail').style.borderColor='var(--red)';return;}
+const btn=document.querySelector('.cta-btn');
+btn.textContent='✓ Request Sent';
+btn.style.background='var(--dark2)';
+btn.style.color='var(--g)';
+document.getElementById('ctaEmail').style.borderColor='var(--g)';
+}
 </script>
 </body>
 </html>
